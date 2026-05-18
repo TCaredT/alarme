@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+</head>
+<body>
+<!-- Player dos sons - ainda não sei bem como se usa, mas deixarei aqui-->
+<!-- <div id="jquery_jplayer"></div> -->
+    <header>
+        <h1>Alarme Online</h1>
+        <h2>O seu despertador online na Web</h2>
+    </header>
+<section class="main">
+    <div class="left">
+        <fieldset class="time current">
+            <legend>Horário atual</legend>
+            <!--aqui vai mostrar o horário atual passando. É o que fica piscando no inspector-->
+            <div class="display"> 
+                <span data-rel="tempo"></span>
+            </div> 
+        </fieldset>
+        <fieldset class="time alarm">
+            <legend>Agendar horário</legend>
+            <button class="set"> <!--deve ter um event no JS-->
+                <span>Agendar
+                    <br>
+                    Alarme
+                </span>
+            </button>
+            <div class="display"> <!--horas,minuto,segundos originalmente é "field"-->
+                <div class="horas">
+                    <h3>Hora</h3>
+                    <input readonly type="text" name="field-hora" data-rel="hora" value="12">
+                    <div class="control">
+                        <button data-rel="up">
+                            <span>▲</span>
+                        </button> <!--deve ter um event no JS-->
+                        <button data-rel="down">
+                            <span>▼</span>
+                        </button> <!--deve ter um event no JS-->
+                    </div>
+                </div>
+                <div class="dois-pontos"></div>
+                <div class="minutos"></div>
+                <div class="dois-pontos"></div>
+                <div class="segundos"></div>
+                <div class="dois-pontos"></div>
+            </div>
+        </fieldset>
+    </div>
+</section>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
