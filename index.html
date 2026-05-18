@@ -36,23 +36,73 @@
                     <input readonly type="text" name="field-hora" data-rel="hora" value="12">
                     <div class="control">
                         <button data-rel="up">
-                            <span>▲</span>
-                        </button> <!--deve ter um event no JS-->
+                            <span>▲</span></button> <!--deve ter um event no JS-->
                         <button data-rel="down">
-                            <span>▼</span>
-                        </button> <!--deve ter um event no JS-->
+                            <span>▼</span></button> <!--deve ter um event no JS-->
                     </div>
                 </div>
-                <div class="dois-pontos"></div>
-                <div class="minutos"></div>
-                <div class="dois-pontos"></div>
-                <div class="segundos"></div>
-                <div class="dois-pontos"></div>
+                <div class="dois-pontos">
+                    <span>:</span>
+                </div>
+                <div class="minutos">
+                    <h3>Minuto</h3>
+                    <input readonly="" type="text" name="field-minuto" data-rel="minuto" value="00">
+                    <div class="control">
+						<button data-rel="up"><span>▲</span></button>
+						<button data-rel="down"><span>▼</span></button>
+					</div>
+                </div>
+                <div class="dois-pontos">
+                    <span>:</span>
+                </div>
+                <div class="segundos">
+                    <h3>Segundo</h3>
+                    <input readonly="" type="text" name="field-segundo" data-rel="segundo" value="00">
+                    <div class="control">
+						<button data-rel="up"><span>▲</span></button>
+						<button data-rel="down"><span>▼</span></button>
+					</div>
+                </div>
+                <hr> <!--aqui é apenas uma linha horizontal de separação, como uma quebra de página-->
+                <!-- aqui aparece apenas quando a gente agenda o alarme >> vira display block quando dá set no tempo do relógio e muda mais umas coisas no css-->
+                <div class="configure" style="display: none;">
+				    <span class="caption">Despertando em xx horas, xx minutos e xx segundos</span>
+				</div>
+                <div class="sound">
+						<h3>Escolha o som do alarme:</h3>
+						<div class="list"> <!-- o selected muda conforme clica-->
+							<div class="box clock selected" data-value="clock.mp3">
+								<label>Clássico</label>
+								<button data-rel="test"><span>► Testar som</span></button>
+							</div>						
+						
+							<div class="box rooster" data-value="rooster.mp3">
+								<label>Galo</label>
+								<button data-rel="test"><span>► Testar som</span></button>
+							</div>
+							
+							<div class="box car" data-value="caralarm.mp3">
+								<label>Carro</label>
+								<button data-rel="test"><span>► Testar som</span></button>
+							</div>
+
+							<div class="box cuckoo" data-value="cuckoo.mp3">
+								<label>Cuco</label>
+								<button data-rel="test"><span>► Testar som</span></button>
+							</div>
+                            <!--o value muda conforme clical pra ouvir o som respectivo-->
+							<input type="hidden" data-rel="sound" name="field-sound" value="clock.mp3">
+						</div>
+				</div>
             </div>
         </fieldset>
     </div>
 </section>
-
+<footer>
+    <p>
+        <a href="https://github.com/TCaredT" target="_blank">Meu Github</a>
+    </p>
+</footer>
 
 
 
